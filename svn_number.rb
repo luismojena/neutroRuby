@@ -17,11 +17,8 @@ class SVNNumber
   end
 
   def component_generic_setter(value)
-    if check_range(value)
-      value
-    else
-      throw Exception.new('value must be in the range [0,1]')
-    end
+    raise Exception, 'value must be in the range [0,1]' unless check_range(value)
+    value
   end
 
   def t=(value)
