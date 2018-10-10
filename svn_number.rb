@@ -3,9 +3,9 @@ class SVNNumber
   attr_reader :t, :i, :f
 
   def initialize(t, i, f)
-    @t = t # true
-    @i = i # undeterminated
-    @f = f # false
+    self.t = t
+    self.i = i # undeterminated
+    self.f = f # false
   end
 
   def check_range(value)
@@ -20,7 +20,7 @@ class SVNNumber
     if check_range(value)
       value
     else
-      throw Exception('t value must be in the range [0,1]')
+      throw Exception('value must be in the range [0,1]')
     end
   end
 
