@@ -10,7 +10,7 @@ class NeutrosophicSetElement
 
   def initialize(label, svn_number)
     @label = label
-    @svn_number = svn_number
+    self.svn_number = svn_number
   end
 
   def svn_number=(svn_number)
