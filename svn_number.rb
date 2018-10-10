@@ -20,7 +20,7 @@ class SVNNumber
     if check_range(value)
       value
     else
-      throw Exception('value must be in the range [0,1]')
+      throw Exception.new('value must be in the range [0,1]')
     end
   end
 
