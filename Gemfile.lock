@@ -1,0 +1,15 @@
+PATH
+  remote: vendor/bundle
+  specs:
+
+GEM
+  remote: http://nexus.prod.uci.cu/repository/rubygems-all/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+
+BUNDLED WITH
+   1.16.6
