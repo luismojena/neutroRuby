@@ -34,8 +34,13 @@ class NeutrosophicSet
   end
 
   def remove(neutrosophic_set_element)
-    raise ArgumentError, 'value must be an instance of NeutrosophicSetElement class' unless neutrosophic_set_element.instance_of? NeutrosophicSetElement
-    @set.delete(neutrosophic_set_element.label)
+    if neutrosophic_set_element.instance_of?(String)
+      @set.delete(neutrosophic_set_element)
+    elsif neutrosophic_set_element.instance_of?(NeutrosophicSetElement)
+      @set.delete(neutrosophic_set_element.label)
+    else
+      raise ArgumentError, 'value must be an instance of [NeutrosophicSetElement,String] class(es)'
+    end
   end
 
   def get(label)
