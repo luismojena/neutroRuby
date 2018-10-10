@@ -1,4 +1,4 @@
-require_relative './../svn_number'
+require_relative './../neutrosophy/svn_number'
 require 'test/unit'
 
 class SVNNumberTest < Test::Unit::TestCase
