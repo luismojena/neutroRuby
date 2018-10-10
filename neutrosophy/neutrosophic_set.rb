@@ -18,6 +18,14 @@ class NeutrosophicSetElement
     @svn_number = svn_number
   end
 
+  def to_s
+    '(' + label + ',' + '|' + @svn_number.t.to_s + ',' + @svn_number.i.to_s + ',' + @svn_number.f.to_s + '|' + ')'
+  end
+
+  def to_str
+    self.to_s
+  end
+
 end
 
 #
@@ -49,6 +57,16 @@ class NeutrosophicSet
 
   def to_array
     @set.values
+  end
+
+  def to_s
+    str = '['
+    self.to_array.each {|item| str += item.to_s}
+    str += ']'
+  end
+
+  def to_str
+    self.to_s
   end
 
 end
