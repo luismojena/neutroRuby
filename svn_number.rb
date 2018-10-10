@@ -17,7 +17,7 @@ class SVNNumber
   end
 
   def component_generic_setter(value)
-    raise Exception, 'value must be in the range [0,1]' unless check_range(value)
+    raise ArgumentError, 'value must be in the range [0,1]' unless check_range(value)
     value
   end
 
